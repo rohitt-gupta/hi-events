@@ -66,6 +66,7 @@ export async function POST(req: Request) {
       photo: image_url,
     }
 
+    console.log("eventdata: ", evt.data);
 
     const newUser = await createUser(user);
 

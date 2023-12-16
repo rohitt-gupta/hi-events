@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { ClerkProvider } from '@clerk/nextjs'
 import { Poppins } from 'next/font/google'
-import { Toaster } from 'react-hot-toast';
 import './globals.css'
 
 const poppins = Poppins({
@@ -28,7 +27,6 @@ export default function RootLayout({
       <html lang="en">
         <body className={poppins.variable}>{children}</body>
       </html>
-      <Toaster />
     </ClerkProvider>
   )
 }

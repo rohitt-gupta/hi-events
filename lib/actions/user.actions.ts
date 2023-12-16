@@ -14,12 +14,7 @@ import toast from 'react-hot-toast'
 export async function createUser(user: CreateUserParams) {
   try {
     await connectToDatabase()
-    toast(user.username)
-    toast(user.email)
-    toast(user.clerkId)
-    toast(user.firstName)
     const newUser = await User.create(user)
-
     return JSON.parse(JSON.stringify(newUser))
   } catch (error) {
 
